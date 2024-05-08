@@ -1,0 +1,38 @@
+<app-navbarpart></app-navbarpart>
+<div class="container">
+
+<div class="films">
+  <h1>List des Films</h1>
+<div class="row">
+  <div class="col-4" *ngFor="let item of objfilm">
+    <div class="wrapper" >
+
+      <div class="card">
+
+          <img src="https://localhost:7178/api/Film/logo/{{item.
+            logoFilePath}}
+          ">
+          <div class="descriptions">
+              <h1>{{item.titre}}</h1>
+              <p>
+                {{item.description}}
+              </p>
+              <button type="submit" routerLink="/partner/detaillFilm/{{item.id}}" style="margin-right: 3%;">
+                Detaille Film
+              </button>
+              <button type="submit" routerLink="/partner/updatefilm/{{item.id}}">
+                Mise a joure Film
+              </button>
+          </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+
+</div>
+</div>
+</div>

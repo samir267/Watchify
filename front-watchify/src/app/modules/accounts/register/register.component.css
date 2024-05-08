@@ -1,0 +1,14 @@
+.is-invalid {
+  border: 1px solid red;
+  background-color: #ffe5e5; /* Light red background */
+}
+
+.is-valid {
+  border: 1px solid green;
+  background-color: #e5ffe5; /* Light green background */
+}
+.inlinLinks
+{
+  display: flex;
+  justify-content: space-between;
+}

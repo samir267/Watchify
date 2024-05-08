@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "back-wachify", "back-wachify\back-wachify.csproj", "{CBCA852D-0E6F-4E62-A957-5451AE100D89}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBCA852D-0E6F-4E62-A957-5451AE100D89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBCA852D-0E6F-4E62-A957-5451AE100D89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBCA852D-0E6F-4E62-A957-5451AE100D89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBCA852D-0E6F-4E62-A957-5451AE100D89}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5B1DF93-488D-4DFE-AC0E-B06C61A669C4}
+	EndGlobalSection
+EndGlobal

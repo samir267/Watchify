@@ -1,0 +1,38 @@
+<div class="list1">
+    <div class="row">
+      <h4>Films List</h4>
+    </div>
+    <table >
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Id</th>
+          <th>Genre</th>
+          <th>Durée</th>
+          <th>Description</th>
+          <th>UserId</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of allFilms; let i = index">
+
+            <td>{{i}}</td>
+            <td>{{item.id}}</td>
+            <td>{{item.genre}}</td>
+            <td>{{item.duree}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.userId}}</td>
+
+
+
+         
+        
+
+        
+
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>

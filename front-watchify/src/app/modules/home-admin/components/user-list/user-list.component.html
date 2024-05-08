@@ -1,0 +1,44 @@
+<div class="list1">
+    <div class="row">
+      <h4>Users List</h4>
+    </div>
+    <table >
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Id</th>
+          <th>State</th>
+          <th>Email</th>
+          <th style="text-align: start;">Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of allUsers; let i = index">
+          <ng-container *ngIf="item.role != '0'">
+
+          <td>{{i+1}}</td>
+          <td>{{item.id}}</td>
+          <td>
+              <h6 *ngIf="item.etat == '0'">Enabled</h6>
+              <h6 *ngIf="item.etat == '1'">Disabled</h6>
+          </td>
+          <td>{{item.username}}</td>
+          <td>
+            <!-- <button class="btn btn-primary" (click)="openModal()">Open modal</button> -->
+            <!-- <button  type="button" class="btn btn-outline-primary" (click)="openDialog()">Edit</button> -->
+
+            <!-- <button type="button" class="btn btn-outline-primary" >Update</button> -->
+            <button type="button" class="btn btn-outline-primary" *ngIf="item.etat == '0'" (click)="deactivateUser(item.id)">Disable</button>
+            <button type="button" class="btn btn-outline-primary" *ngIf="item.etat == '1'" (click)="deactivateUser(item.id)">Enable</button>
+            <button type="button" class="btn btn-outline-primary" (click)="deleteUser(item.id)" mat-raised-button>Delete</button>
+        
+
+        
+          </td>
+        </ng-container>
+
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>

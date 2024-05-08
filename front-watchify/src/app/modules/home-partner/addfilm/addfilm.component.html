@@ -1,0 +1,94 @@
+<app-navbarpart></app-navbarpart>
+<div class="container">
+  <form [formGroup]="AjouterFilm" (ngSubmit)="ajoutrFilm()">
+
+  <h1>Ajouter un Film</h1>
+  <!-- ligne 1 -->
+  <div class="row">
+    <div class="col">
+
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="titre">
+        <label for="floatingInput">Titre</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="description">
+        <label for="floatingInput">discription</label>
+      </div>
+    </div>
+
+  </div>
+
+<!-- ligne 2 -->
+  <div class="row">
+    <div class="col">
+
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="duree">
+        <label for="floatingInput">duree de film</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="genre">
+        <label for="floatingInput">Genre de film</label>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ligne 3 -->
+  <div class="row">
+    <div class="col">
+
+      <div class="form-floating mb-3">
+        <input type="datetime-local" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="dateDeSortie">
+        <label for="floatingInput">date sortie  de film</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-floating mb-3">
+        <!-- <label for="isFree" class="form-label">Gratuit ?</label>
+        <input type="checkbox" class="form-check-input" id="isFree" formControlName="isFree"> -->
+        <div class="form-check">
+          <input class="form-check-input" type="radio"  value="false" formControlName="isFree" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Gratuit
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" formControlName="isFree" value="true" id="flexRadioDefault2" >
+          <label class="form-check-label" for="flexRadioDefault2">
+            avec argent
+          </label>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+   <!-- ligne 4 -->
+   <div class="row">
+    <div class="col">
+
+      <div class="mb-3">
+        <label for="video" class="form-label">Video File</label>
+        <input type="file" id="video" (change)="onVideoFileSelected($event)" accept="video/*" class="form-control" formControlName="videoFilePath">
+      </div>
+    </div>
+    <div class="col">
+      <div class="mb-3">
+        <label for="image" class="form-label">Image File</label>
+        <input type="file" id="image" (change)="onLogoFileSelected($event)" accept="image/*" class="form-control" formControlName="logoFilePath">
+      </div>
+    </div>
+
+  </div>
+  <button type="submit" class="btn btn-primary">Ajouter Film</button>
+  </form>
+
+</div>
